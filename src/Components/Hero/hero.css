@@ -1,0 +1,50 @@
+.hero{
+    display: flex;
+    margin: 50px 100p 0px 100px;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero img{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.hero h1{
+    font-size: 50px;
+    width: 70%;
+    text-align: center;
+}
+.hero span{
+    background: linear-gradient(267deg, red,blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p{
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+.hero-action{
+    display: flex;
+}
+.hero-resume{
+    border: 2px solid white;
+    padding: 10px 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(267deg, red,blue);
+}
+
+.connect-me{
+    border: 2px solid white;
+    padding: 10px 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(267deg,rgb(255, 51, 0), rgb(77, 75, 236));
+}
