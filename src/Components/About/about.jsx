@@ -1,4 +1,5 @@
 import './about.css'
+import MyPhoto from "../../assets/MyPhoto.jpg"
 export default function About() {
     return (
         <div id='about' className="about">
@@ -9,7 +10,7 @@ export default function About() {
 
             <div className="about-section">
                 <div className="about-left">
-                    <img src="src\assets\MyPhoto.jpg" alt="My photo" width={400}  height={400}/>
+                    <img src={MyPhoto} alt="My photo" width={400}  height={400}/>
                 </div>
 
                 <div className="about-right">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Element } from 'react-scroll'
+import Logo from "../../assets/Logo-first.jpg"
 import './navbar.css'
 import About from "../About/about";
 
@@ -9,7 +10,7 @@ export default function Navbar() {
         <>
             <div className="navbar">
 
-                <div className="image"><img src="src\assets\Logo-first.jpg" alt="Logo" /></div>
+                <div className="image"><img src={Logo} alt="Logo" /></div>
 
                 <ul className="nav-menu">
                     <Link to="home" smooth={true} duration={100}><li className="item">Home</li></Link>
