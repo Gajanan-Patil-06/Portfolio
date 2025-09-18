@@ -87,3 +87,70 @@
 .button {
     border-radius: 20px;
 }
+
+/* === Responsive Layouts === */
+
+/* --- Tablets and smaller laptops --- */
+@media screen and (max-width: 1024px) {
+    .upper-services,
+    .lower-services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 80%;
+        align-items: center;
+    }
+
+    .services {
+        gap: 30px;
+    }
+}
+
+/* --- Tablets and large phones --- */
+@media screen and (max-width: 768px) {
+    .service {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        margin: 0 auto; /* Center the card properly */
+    }
+
+    .P-Title {
+        font-size: 22px;
+    }
+
+    .information {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .button {
+        width: 80px;
+        font-size: 14px;
+    }
+}
+
+/* --- Phones --- */
+@media screen and (max-width: 480px) {
+    .service-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .P-Title {
+        font-size: 18px;
+    }
+
+    .information {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .button {
+        width: 100px;
+        font-size: 12px;
+        padding: 10px;
+    }
+}

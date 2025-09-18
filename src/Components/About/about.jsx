@@ -35,12 +35,12 @@ export default function About() {
                     <h1>2+</h1>
                     <p>YEAR OF EXPERIENCE</p>
                 </div>
-                <hr />
+                
                 <div className="about-achievement">
                     <h1>90+</h1>
                     <p>COMPLETE PROJECT</p>
                 </div>
-                <hr />
+                
                 <div className="about-achievement">
                     <h1>10+</h1>
                     <p>HAPPY CLIENTS</p>

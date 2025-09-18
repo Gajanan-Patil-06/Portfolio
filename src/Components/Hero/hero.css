@@ -1,50 +1,142 @@
-.hero{
+/* ========== Hero Section ========== */
+.hero {
     display: flex;
-    margin: 50px 100p 0px 100px;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 20px;
-}
-.hero img{
-    width: 200px;
-    border-radius: 50%;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Ensures center alignment */
 }
 
-.hero h1{
+.hero img {
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.hero h1 {
     font-size: 50px;
     width: 70%;
     text-align: center;
 }
-.hero span{
-    background: linear-gradient(267deg, red,blue);
+
+.hero span {
+    background: linear-gradient(267deg, red, blue);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero p{
-    width: 50%;
+.hero p {
+    width: 60%;
     font-size: 20px;
+    line-height: 32px;
     text-align: center;
-    line-height: 40px;
-}
-.hero-action{
-    display: flex;
-}
-.hero-resume{
-    border: 2px solid white;
-    padding: 10px 10px;
-    margin: 10px;
-    text-align: center;
-    border-radius: 20px;
-    background: linear-gradient(267deg, red,blue);
 }
 
-.connect-me{
+.hero-action {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-resume,
+.connect-me {
     border: 2px solid white;
-    padding: 10px 10px;
-    margin: 10px;
+    padding: 12px 24px;
     text-align: center;
     border-radius: 20px;
-    background: linear-gradient(267deg,rgb(255, 51, 0), rgb(77, 75, 236));
+    background: linear-gradient(267deg, red, blue);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 16px;
+}
+
+.connect-me {
+    background: linear-gradient(267deg, rgb(255, 51, 0), rgb(77, 75, 236));
+}
+
+.hero-resume:hover,
+.connect-me:hover {
+    transform: scale(1.05);
+}
+
+
+/* ========== Responsive Design ========== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 40px;
+        width: 85%;
+    }
+
+    .hero p {
+        width: 80%;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+/* Mobile / Small Tablets */
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero img {
+        width: 200px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        width: 100%;
+        line-height: 40px;
+    }
+
+    .hero p {
+        width: 90%;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .hero-action {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-resume,
+    .connect-me {
+        width: 80%;
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .hero img {
+        width: 150px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .hero-resume,
+    .connect-me {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
 }

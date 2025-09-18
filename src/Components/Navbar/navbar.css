@@ -1,26 +1,34 @@
+/* ========== Navbar Container ========== */
 .navbar {
-    text-align: center;
     display: flex;
-
-    margin: 10px 40px 0px 40px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Enables wrapping on smaller screens */
+    padding: 10px 20px;
+    gap: 20px;
 }
 
+/* ========== Logo Image ========== */
 .image img {
     width: 100px;
     height: 100px;
 }
 
+/* ========== Nav Menu ========== */
 .nav-menu {
     display: flex;
     list-style: none;
-    margin-top: 25px;
-    margin-left: 650px;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
+/* ========== Nav Items ========== */
 .item {
-    margin-left: 29px;
     font-size: 20px;
-    gap: 40px;
     transition: 0.1s;
 }
 
@@ -30,31 +38,96 @@
     color: gray;
 }
 
-.nav-connect p {
-    width: 100px;
-    text-align: center;
-    height: 29px;
-    padding: 5px 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 1s;
-}
-
+/* ========== Contact Button ========== */
 .nav-connect {
-    margin: 15px;
-    margin-left: 25px;
-    width: 100px;
-    text-align: center;
-    height: 29px;
-    padding: 5px 5px;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
     background: linear-gradient(267deg, red, blue);
     cursor: pointer;
-    transition: 1s;
+    transition: 0.3s ease;
     border-radius: 29px;
+    height: 40px;
+    min-width: 120px;
+}
+
+.nav-connect p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .nav-connect:hover {
-
     transform: scale(1.1);
+}
+
+
+/* ========== Responsive Styles ========== */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-menu {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .nav-connect {
+        margin: 10px auto;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .item {
+        font-size: 18px;
+    }
+
+    .nav-connect {
+        height: 36px;
+        padding: 5px 15px;
+    }
+
+    .nav-connect p {
+        font-size: 15px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .item {
+        font-size: 16px;
+    }
+
+    .nav-connect {
+        padding: 4px 12px;
+        height: 34px;
+        min-width: 100px;
+    }
+
+    .nav-connect p {
+        font-size: 14px;
+    }
 }

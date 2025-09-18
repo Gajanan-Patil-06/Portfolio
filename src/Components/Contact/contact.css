@@ -1,41 +1,13 @@
 .contact {
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    align-items: center;
+    padding: 60px 20px;
+    margin-top: 100px;
     margin-bottom: 50px;
-}
-
-.contact h1 {
-    font-size: 40px;
-}
-
-.contact-left h1 {
-    background: linear-gradient(7deg, rgb(243, 40, 4), blue);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 40px;
-    margin-bottom: 60px;
-}
-
-.contact-left p {
-    line-height: 40px;
-    font-size: 18px;
-}
-
-.email {
-    display: flex;
-    gap: 10px;
-}
-
-.contact-no {
-    display: flex;
-    gap: 10px;
-}
-
-.location {
-    display: flex;
-    gap: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-title {
@@ -46,50 +18,176 @@
     margin-bottom: 50px;
 }
 
+.contact-title h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
 .contact-page {
     display: flex;
-    gap: 50px;
-    align-items: center;
-    text-align: left;
-    justify-content: space-around;
-    padding: 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     gap: 20px;
-    width: 350px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.contact-left h1 {
+    background: linear-gradient(7deg, rgb(243, 40, 4), blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    line-height: 32px;
+    font-size: 16px;
+    color: #f8f3f3;
+}
+
+.email,
+.contact-no,
+.location {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 16px;
+    color: #857474;
 }
 
 .contact-right {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
 }
 
 .contact-right label {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.contact-right input {
-    height: 29px;
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #857474;
 }
 
 .contact-right textarea {
-    height: 50px;
+    min-height: 100px;
+    resize: vertical;
 }
 
 .contact-right button {
     border-radius: 20px;
-    height: 40px;
+    height: 45px;
     background: linear-gradient(7deg, rgb(243, 40, 4), blue);
-    color: aliceblue;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-right button:hover {
+    opacity: 0.9;
 }
 
 .contact-right form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 15px;
+        margin-top: 60px;
+    }
+
+    .contact-title h1 {
+        font-size: 32px;
+    }
+
+    .contact-page {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 40px;
+    }
+
+    .contact-left h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .contact-left p {
+        text-align: center;
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .email,
+    .contact-no,
+    .location {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact-right label {
+        font-size: 16px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        font-size: 14px;
+    }
+
+    .contact-right button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title h1 {
+        font-size: 24px;
+    }
+
+    .contact-left h1 {
+        font-size: 24px;
+    }
+
+    .contact-left p {
+        font-size: 14px;
+    }
+
+    .contact-right label {
+        font-size: 15px;
+    }
+
+    .contact-right button {
+        font-size: 14px;
+        height: 40px;
+    }
 }

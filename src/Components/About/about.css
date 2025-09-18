@@ -1,99 +1,192 @@
-.about{
+.about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* ✅ Center entire section */
 }
-.about-title h1{
-    margin-top: 60px;
-    padding: 0px 40px;
+
+.about-title h1 {
+    margin-top: 40px;
+    padding: 0 20px;
     font-size: 50px;
     font-weight: 600;
-}
-.about-section{
-    display: flex;
-    gap: 20px;
-}
-.about-right{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    text-align: center;
 }
 
-.about-right .about-para{
-    margin: 15px 100px 20px 0px;
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.about-right {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 700px;
+}
+
+.about-right .about-para {
     font-size: 18px;
     text-align: center;
+    justify-content: center;
     line-height: 30px;
+    padding: 0 20px;
 }
 
-.about-skills{
+.about-skills {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    
-
+    width: 100%;
 }
-.about-skill{
+
+.about-skill {
     display: flex;
-    gap: 40px;
     align-items: center;
-    transition: 1s;
-    
-    
-    
+    /* justify-content: center; */
+    gap: 20px;
+    transition: 0.5s;
+    flex-wrap: wrap;
 }
-.about-skill:hover{
-    transform: scaleX(1.12);
 
+.about-skill:hover {
+    transform: scale(1.05);
 }
-.about-skill p{
+
+.about-skill p {
     font-size: 15px;
     font-weight: 600;
-    width: 90px;
-    
+    width: 120px;
+    /* text-align: right; */
 }
-.about-skill hr{
-    
-    outline: none;
+
+.about-skill hr {
     border: none;
     width: 50%;
     height: 8px;
-    border-radius:50px;
-    background: linear-gradient(104deg,rgb(255, 0, 55),rgb(0, 68, 255));
-
+    border-radius: 50px;
+    background: linear-gradient(104deg, rgb(255, 0, 55), rgb(0, 68, 255));
 }
 
-.about-achievements{
+.about-achievements {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 100px;
-}
-.about-achievement{
-    transition: 1s;
-}
-.about-achievement:hover{
-    transform: scale(1.2);
+    margin-bottom: 80px;
 }
 
-.about-achievement h1{
-    background: linear-gradient(7deg, rgb(255, 0, 0),rgb(0, 255, 221));
+.about-achievement {
+    text-align: center;
+    transition: 0.5s;
+    min-width: 150px;
+}
+
+.about-achievement:hover {
+    transform: scale(1.1);
+}
+
+.about-achievement h1 {
+    font-size: 40px;
+    background: linear-gradient(7deg, rgb(255, 0, 0), rgb(0, 255, 221));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.about-achievement p{
-    background: linear-gradient(267deg, rgb(111, 0, 255),rgb(0, 255, 221));
+
+.about-achievement p {
+    font-size: 16px;
+    background: linear-gradient(267deg, rgb(111, 0, 255), rgb(0, 255, 221));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+/* Responsive Design */
 
+@media (max-width: 1024px) {
+    .about-title h1 {
+        font-size: 42px;
+    }
 
+    .about-right .about-para {
+        font-size: 17px;
+    }
+
+    .about-skill p {
+        font-size: 14px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title h1 {
+        font-size: 36px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-right .about-para {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 0 10px;
+    }
+
+    .about-skill {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-skill p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-skill hr {
+        width: 80%;
+    }
+
+    .about-achievements {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title h1 {
+        font-size: 28px;
+    }
+
+    .about-right .about-para {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .about-skill p {
+        font-size: 13px;
+    }
+
+    .about-achievement h1 {
+        font-size: 24px;
+    }
+
+    .about-achievement p {
+        font-size: 14px;
+    }
+}
